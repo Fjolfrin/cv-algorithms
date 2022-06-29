@@ -7,6 +7,5 @@ As this is a personal project, the list of implemented methods will grow in time
 Any suggestions for method additions or alterations are welcome! Please add an issue/feature request if you have want to make any comment.
 
 **Implemented methods**
-- Convolution (1D/2D/3D)
-- Filter Application
+- Convolution (1D/2D)
 - More methods coming up!

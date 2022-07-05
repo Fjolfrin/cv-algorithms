@@ -1,8 +1,6 @@
 from convolution import *
 from matplotlib import pyplot as plt
-import numpy as np
 from warnings import filterwarnings
-from scipy import signal
 
 # Do not show any warnings that do not affect the result.
 filterwarnings('ignore')
@@ -29,7 +27,6 @@ def conv2d_demo(x, h):
     # Calculate the output of the convolution between the two arrays,
     # and print the result.
     y = conv2d(x, h, padding="full", stride=1)
-    y2 = signal.convolve2d(x, h, mode="full")
     print(y)
 
     # Plot the two input arrays and their convolution.
@@ -47,5 +44,5 @@ def conv2d_demo(x, h):
 def conv3d_demo(x, h):
     # Calculate the output of the convolution between the two signals,
     # and print the result.
-    y = conv1d(x, h, padding="same", stride=1)
+    y = conv3d(x, h, padding="same", stride=1)
     print(y)

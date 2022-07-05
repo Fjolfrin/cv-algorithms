@@ -19,11 +19,22 @@ edge_sobel_vertical = np.array([[-1, 0, 1],
 edge_sobel_horizontal = np.array([[1, 2, 1],
                                   [0, 0, 0],
                                   [-1, -2, -1]])
+edge_prewitt_vertical = np.array([[1, 1, 1],
+                                  [0, 0, 0],
+                                  [-1, -1, -1]])
+edge_prewitt_horizontal = np.array([[1, 0, -1],
+                                    [1, 0, -1],
+                                    [1, 0, -1],])
 edge_roberts_up = np.array([[0, -1],
                             [1, 0]])
 edge_roberts_down = np.array([[-1, 0],
                               [0, 1]])
-
+edge_laplace = np.array([[0, 1, 0],
+                         [1, -4, 1],
+                         [0, 1, 0]])
+edge_laplace_diag = np.array([[0.5, 1, 0.5],
+                              [1, -6, 1],
+                              [0.5, 1, 0.5]])
 
 def add_noise(image:np.array, noise_type:str):
     """
@@ -80,8 +91,8 @@ def median_filter(image:np.array, window_size:int):
     # input image.
     output = output[window_size // 2: output.shape[0] - window_size // 2,
                     window_size // 2: output.shape[1] - window_size // 2]
-                
 
     return output
 
 
+image_path = ""
